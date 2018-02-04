@@ -1,25 +1,25 @@
-import React from "react";
-import { styled } from "styletron-react";
-import Link from "gatsby-link";
+import React from 'react';
+import { styled } from 'styletron-react';
+import Link from 'gatsby-link';
 
-import { rhythm } from "../utils/typography";
+import { rhythm } from '../utils/typography';
 
 const Title = styled('h1', {
   display: 'inline-block',
-  borderBottom: '1px solid'
-})
+  borderBottom: '1px solid',
+});
 
 const Subtitle = styled('h2', null);
 
-const PostTitle = styled('h3',{
-  marginBottom: rhythm(1/4)
-})
+const PostTitle = styled('h3', {
+  marginBottom: rhythm(1 / 4),
+});
 
 const GreyText = styled('span', {
-  color: "#BBB"
-})
+  color: '#BBB',
+});
 
-const Excerpt = styled('p', null)
+const Excerpt = styled('p', null);
 
 export default ({ data }) => {
   console.log(data);
@@ -28,16 +28,16 @@ export default ({ data }) => {
       <Title>
         Amazing Pandas Eating Things
       </Title>
-      <Subtitle>{data.allMarkdownRemark.totalCount} Posts</Subtitle>
+      <Subtitle>{data.allMarkdownRemark.totalCount}{' Posts'}</Subtitle>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
           <Link
             to={node.fields.slug}
-            css={{ textDecoration: `none`, color: `inherit` }}
+            css={{ textDecoration: 'none', color: 'inherit' }}
           >
             <PostTitle marginBottom={rhythm(1 / 4)}>
-              {node.frontmatter.title}{" "}
-              <GreyText>— {node.frontmatter.date}</GreyText>
+              {node.frontmatter.title}{' '}
+              <GreyText>{'— '}{node.frontmatter.date}</GreyText>
             </PostTitle>
             <Excerpt>{node.excerpt}</Excerpt>
           </Link>

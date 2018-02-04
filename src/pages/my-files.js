@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react';
 
 export default ({ data }) => {
-  console.log(data)
+  console.log(data);
   return (
     <div>
-      <h1>My Site's Files</h1>
+      <h1>{"My Site's Files"}</h1>
       <table>
         <thead>
           <tr>
@@ -15,8 +15,8 @@ export default ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.allFile.edges.map(({ node }, index) =>
-            <tr key={index}>
+          {data.allFile.edges.map(({ node }) => (
+            <tr key={node.relativePath}>
               <td>
                 {node.relativePath}
               </td>
@@ -29,13 +29,12 @@ export default ({ data }) => {
               <td>
                 {node.birthTime}
               </td>
-            </tr>
-          )}
+            </tr>))}
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query MyFilesQuery {
@@ -50,4 +49,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
