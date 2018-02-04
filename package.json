@@ -5,7 +5,8 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "fix": "node_modules/eslint/bin/eslint.js --fix src"
   },
   "dependencies": {
     "gatsby": "^1.9.158",
@@ -17,5 +18,12 @@
     "typography-theme-bootstrap": "^0.16.7",
     "typography-theme-lawton": "^0.15.10",
     "typography-theme-noriega": "^0.15.10"
+  },
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1"
   }
 }
