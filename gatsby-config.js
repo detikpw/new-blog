@@ -1,21 +1,23 @@
 module.exports = {
   siteMetadata: {
-    title: `Pandas Eating Lots`,
+    title: 'Pandas Eating Lots',
   },
   plugins: [
     'gatsby-plugin-styletron',
-    `gatsby-transformer-remark`,
+    'gatsby-transformer-remark',
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `src`,
+        name: 'src',
         path: `${__dirname}/src/`,
       },
     },
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: `src/utils/typography.js`,
+        pathToConfigModule: 'src/utils/typography.js',
       },
     },
   ],
