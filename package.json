@@ -9,7 +9,7 @@
     "fix": "node_modules/eslint/bin/eslint.js --fix src"
   },
   "dependencies": {
-    "gatsby": "^1.9.158",
+    "gatsby": "^1.9.178",
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-catch-links": "^1.0.15",
     "gatsby-plugin-react-helmet": "^2.0.4",
@@ -17,6 +17,7 @@
     "gatsby-plugin-typography": "^1.7.13",
     "gatsby-source-filesystem": "^1.5.16",
     "gatsby-transformer-remark": "^1.7.30",
+    "react-helmet": "^5.2.0",
     "typography-theme-bootstrap": "^0.16.7",
     "typography-theme-lawton": "^0.15.10",
     "typography-theme-noriega": "^0.15.10"
