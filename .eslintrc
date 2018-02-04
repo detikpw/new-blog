@@ -1,6 +1,6 @@
 {
   "settings": {
-    "import/core-modules": ["react", "config", "styletron-react", "typography"]
+    "import/core-modules": ["react", "config", "styletron-react", "typography", "lodash"]
   },
   "rules": {
     "import/extensions" : ["error", { "jsx": "never" } ],
