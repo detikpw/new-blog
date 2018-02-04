@@ -1,6 +1,7 @@
 import React from 'react';
 import { styled } from 'styletron-react';
 import GatsbyLink from 'gatsby-link';
+import { get } from 'lodash/fp';
 
 import { rhythm } from '../utils/typography';
 
@@ -29,7 +30,7 @@ export default ({ children, data }) => (
   <Header>
     <GatsbyLink to="/">
       <Title>
-        {data.site.siteMetadata.title}
+        {get(['site', 'siteMetadata', 'title'])(data)}
       </Title>
     </GatsbyLink>
     <Link to="/about/">
