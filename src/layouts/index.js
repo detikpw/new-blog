@@ -3,6 +3,7 @@ import { styled } from 'styletron-react';
 import GatsbyLink from 'gatsby-link';
 import { get } from 'lodash/fp';
 
+import Navigation from './navigation';
 import { rhythm } from '../utils/typography';
 
 const Link = styled(
@@ -13,11 +14,11 @@ const Link = styled(
   },
 );
 
-const Header = styled('div', {
-  margin: '0 auto',
-  maxWidth: 700,
-  padding: rhythm(2),
-  paddingTop: rhythm(1.5),
+const Layout = styled('div', {
+  display: 'block',
+  borderTopWidth: '5px',
+  borderTopStyle: 'solid',
+  borderTopColor: 'black',
 });
 
 const Title = styled('H3', {
@@ -27,7 +28,8 @@ const Title = styled('H3', {
 });
 
 export default ({ children, data }) => (
-  <Header>
+  <Layout>
+    <Navigation />
     <GatsbyLink to="/">
       <Title>
         {get(['site', 'siteMetadata', 'title'])(data)}
@@ -37,7 +39,7 @@ export default ({ children, data }) => (
       About
     </Link>
     {children()}
-  </Header>
+  </Layout>
 );
 
 export const query = graphql`
