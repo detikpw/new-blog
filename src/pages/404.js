@@ -21,31 +21,28 @@ const GreyText = styled('span', {
 
 const Excerpt = styled('p', null);
 
-export default ({ data }) => {
-  console.log(data);
-  return (
-    <div>
-      <Title>
-        Amazing Pandas Eating Things
-      </Title>
-      <Subtitle>{data.allMarkdownRemark.totalCount}{' Posts'}</Subtitle>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id}>
-          <Link
-            to={node.fields.slug}
-            css={{ textDecoration: 'none', color: 'inherit' }}
-          >
-            <PostTitle marginBottom={rhythm(1 / 4)}>
-              {node.frontmatter.title}{' '}
-              <GreyText>{'— '}{node.frontmatter.date}</GreyText>
-            </PostTitle>
-            <Excerpt>{node.excerpt}</Excerpt>
-          </Link>
-        </div>
-      ))}
-    </div>
-  );
-};
+export default ({ data }) => (
+  <div>
+    <Title>
+      Amazing Pandas Eating Things
+    </Title>
+    <Subtitle>{data.allMarkdownRemark.totalCount}{' Posts'}</Subtitle>
+    {data.allMarkdownRemark.edges.map(({ node }) => (
+      <div key={node.id}>
+        <Link
+          to={node.fields.slug}
+          css={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          <PostTitle marginBottom={rhythm(1 / 4)}>
+            {node.frontmatter.title}{' '}
+            <GreyText>{'— '}{node.frontmatter.date}</GreyText>
+          </PostTitle>
+          <Excerpt>{node.excerpt}</Excerpt>
+        </Link>
+      </div>
+    ))}
+  </div>
+);
 
 export const query = graphql`
   query Wakwaw {

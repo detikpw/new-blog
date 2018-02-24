@@ -9,7 +9,10 @@ export default ({ data }) => {
     <div>
       <Helmet title={`${data.site.siteMetadata.title} - ${title}`} />
       <h1>{title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
     </div>
   );
 };

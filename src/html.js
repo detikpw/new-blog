@@ -3,8 +3,10 @@ import React from 'react';
 let stylesStr;
 if (process.env.NODE_ENV === 'production') {
   try {
+    // eslint-disable-next-line
     stylesStr = require('!raw-loader!../public/styles.css');
   } catch (e) {
+    // eslint-disable-next-line no-console
     console.log(e);
   }
 }
@@ -15,11 +17,13 @@ module.exports = (props) => {
     css = (
       <style
         id="gatsby-inlined-css"
+        // eslint-disable-next-line no-danger
         dangerouslySetInnerHTML={{ __html: stylesStr }}
       />
     );
   }
   return (
+    // eslint-disable-next-line  jsx-a11y/html-has-lang
     <html {...props.htmlAttributes}>
       <head>
         <meta charSet="utf-8" />
@@ -36,6 +40,7 @@ module.exports = (props) => {
         <div
           key={'body'}
           id="___gatsby"
+          // eslint-disable-next-line no-danger
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
