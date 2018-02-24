@@ -9,5 +9,5 @@ export const NAV_LINKS = [
   },
 ];
 
-console.log('Temporary caused by rule refer default');
+// 'Temporary caused by rule refer default'
 export default null;
