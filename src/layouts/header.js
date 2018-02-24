@@ -39,13 +39,14 @@ const NavLink = SiteLink.extend`
   font-weight: 300;
 `;
 
-export default () => (
+export default ({ siteTitle, navLinks }) => (
   <HeaderWrapper>
     <Header>
-      <SiteTitle><SiteLink><h1>DUMMY_SITE_TITLE</h1></SiteLink></SiteTitle>
+      <SiteTitle><SiteLink to="/"><h1>{siteTitle}</h1></SiteLink></SiteTitle>
       <NavigationWrapper>
-        <NavLink>DUMMY</NavLink>
-        <NavLink>DUMMY</NavLink>
+        {navLinks.map(({ link, label }) => (
+          <NavLink to={link}>{label}</NavLink>
+        ))}
       </NavigationWrapper>
     </Header>
   </HeaderWrapper>
