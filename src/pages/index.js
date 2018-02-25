@@ -18,7 +18,6 @@ export default ({ data }) => {
             <Title>
               <Link
                 to={get(['fields', 'slug'])(node)}
-                css={{ textDecoration: 'none', color: 'inherit' }}
               >
                 {frontmatter.title}
               </Link>
@@ -35,7 +34,10 @@ export default ({ data }) => {
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+    allMarkdownRemark(
+      sort: {fields: [frontmatter___date], order: DESC}
+      filter: { frontmatter: { published: { ne: false } } }
+    ) {
       totalCount
       edges {
         node {
