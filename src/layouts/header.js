@@ -45,7 +45,7 @@ export default ({ siteTitle, navLinks }) => (
       <SiteTitle><SiteLink to="/"><h1>{siteTitle}</h1></SiteLink></SiteTitle>
       <NavigationWrapper>
         {navLinks.map(({ link, label }) => (
-          <NavLink to={link}>{label}</NavLink>
+          <NavLink key={link} to={link}>{label}</NavLink>
         ))}
       </NavigationWrapper>
     </Header>

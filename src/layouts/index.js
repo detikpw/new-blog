@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { get } from 'lodash/fp';
 import Header from './header';
 import { NAV_LINKS } from '../constants/site-config';
+import '../css/prims.css';
 
 const Layout = styled.div`
   display: block;
