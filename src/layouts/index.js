@@ -11,12 +11,19 @@ const Layout = styled.div`
   border-top-color: black;
 `;
 
+const ContentWrapper = styled.div`
+  margin: 0 auto;
+  display: block;
+`;
+
 export default ({ children, data }) => {
   const siteTitle = get(['site', 'siteMetadata', 'title'])(data);
   return (
     <Layout>
       <Header siteTitle={siteTitle} navLinks={NAV_LINKS} />
-      {children()}
+      <ContentWrapper>
+        {children()}
+      </ContentWrapper>
     </Layout>
   );
 };
