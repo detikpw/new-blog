@@ -1,4 +1,5 @@
 import { ListItem } from '../lists';
+import { GREY } from '../../constants/color';
 
 export default ListItem.extend`
   &:after {
@@ -7,7 +8,7 @@ export default ListItem.extend`
     width: 5rem;
     height: 1px;
     margin: 23px auto;
-    background-color: #e6e6e6;
+    background-color: ${GREY};
   };
   list-style-type: none;
 `;
