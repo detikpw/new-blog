@@ -46,7 +46,10 @@ export default ({ data }) => (
 
 export const query = graphql`
   query Wakwaw {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+    allMarkdownRemark(
+      sort: {fields: [frontmatter___date], order: DESC},
+      filter: { frontmatter: { published: { ne: false } } }
+    ) {
       totalCount
       edges {
         node {
