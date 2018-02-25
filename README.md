@@ -1,4 +1,6 @@
-# gatsby-starter-hello-world
+# Catatan detik blog
+
+Themes inspire from [dyutibarma](https://github.com/dyutibarma/monochrome)
 Starter with the bare essentials needed for a [Gatsby](https://www.gatsbyjs.org/) site
 
 Install this starter (assuming Gatsby is installed) by running from your CLI:
