@@ -1,6 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { get } from 'lodash/fp';
+import Title from '../reusables/posts/title';
+import DateTime from '../reusables/date-time';
 
 export default ({ data }) => {
   const post = get('markdownRemark')(data);
@@ -8,7 +10,8 @@ export default ({ data }) => {
   return (
     <div>
       <Helmet title={`${data.site.siteMetadata.title} - ${title}`} />
-      <h1>{title}</h1>
+      <Title>{title}</Title>
+      <DateTime>{get(['frontmatter', 'date'])(post)}</DateTime>
       <div
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: post.html }}
@@ -23,6 +26,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date(formatString: "DD MMMM, YYYY")
       }
     }
     site {
