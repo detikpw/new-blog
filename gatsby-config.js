@@ -3,7 +3,6 @@ module.exports = {
     title: 'Catatan Detik',
   },
   plugins: [
-    'gatsby-plugin-styletron',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
