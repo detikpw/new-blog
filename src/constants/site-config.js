@@ -1,7 +1,7 @@
 export const NAV_LINKS = [
   {
-    link: '/categories/opini',
-    label: 'Opini',
+    link: '/linux',
+    label: 'Linux',
   },
   {
     link: 'about',
