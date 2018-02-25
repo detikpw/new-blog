@@ -1,42 +1,34 @@
 import React from 'react';
-import { styled } from 'styletron-react';
-import Link from 'gatsby-link';
 import { get } from 'lodash/fp';
-
-import { rhythm } from '../utils/typography';
-
-const PostTitle = styled('h3', {
-  marginBottom: rhythm(1 / 4),
-});
-
-const GreyText = styled('span', {
-  color: '#BBB',
-});
-
-const Excerpt = styled('p', null);
+import Link from '../reusables/link';
+import PostsWrapper from '../reusables/posts/lists';
+import Post from '../reusables/posts/item';
+import Title from '../reusables/posts/title';
+import DateTime from '../reusables/date-time';
+import { BodyText } from '../reusables/typography';
 
 export default ({ data }) => {
   const markdownRemarks = get('allMarkdownRemark')(data);
   return (
-    <div>
+    <PostsWrapper>
       {markdownRemarks.edges.map(({ node }) => {
         const frontmatter = get('frontmatter')(node);
         return (
-          <div key={get('id')(node)}>
-            <Link
-              to={get(['fields', 'slug'])(node)}
-              css={{ textDecoration: 'none', color: 'inherit' }}
-            >
-              <PostTitle marginBottom={rhythm(1 / 4)}>
-                {frontmatter.title}{' '}
-                <GreyText>{'— '}{frontmatter.date}</GreyText>
-              </PostTitle>
-              <Excerpt>{node.excerpt}</Excerpt>
-            </Link>
-          </div>
+          <Post key={get('id')(node)}>
+            <Title>
+              <Link
+                to={get(['fields', 'slug'])(node)}
+                css={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                {frontmatter.title}
+              </Link>
+            </Title>
+            <DateTime>{frontmatter.date}</DateTime>
+            {<BodyText>{node.excerpt}</BodyText>}
+          </Post>
         );
       })}
-    </div>
+    </PostsWrapper>
   );
 };
 
