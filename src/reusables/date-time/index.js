@@ -8,7 +8,7 @@ const Date = styled.time`
   color: ${GREY};
   line-height: 1.8em;
   margin-bottom: 1.3334em;
-  font-weight: 400;
+  font-weight: 1000;
 `;
 
 export default ({ children }) => (
