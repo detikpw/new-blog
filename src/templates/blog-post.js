@@ -4,6 +4,7 @@ import { get } from 'lodash/fp';
 import styled from 'styled-components';
 import Title from '../reusables/posts/title';
 import DateTime from '../reusables/date-time';
+import Link from '../reusables/link';
 import { GREY, PRIMARY_BLACK } from '../constants/color';
 
 const ContentWrapper = styled.div`
@@ -26,6 +27,7 @@ const ContentWrapper = styled.div`
 export default ({ data }) => {
   const post = get('markdownRemark')(data);
   const title = get(['frontmatter', 'title'])(post);
+  const category = get(['frontmatter', 'category'])(post);
   return (
     <div>
       <Helmet title={`${data.site.siteMetadata.title} - ${title}`} />
@@ -35,6 +37,7 @@ export default ({ data }) => {
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
+      category: <Link to={`/${category}`}>{category}</Link>
     </div>
   );
 };
@@ -45,6 +48,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        category
         date(formatString: "DD MMMM, YYYY")
       }
     }
