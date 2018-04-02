@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Title from '../reusables/posts/title';
 import DateTime from '../reusables/date-time';
 import Link from '../reusables/link';
+import { Paper } from '../reusables/segment';
 import { GREY, PRIMARY_BLACK } from '../constants/color';
 
 const ContentWrapper = styled.div`
@@ -33,11 +34,13 @@ export default ({ data }) => {
       <Helmet title={`${data.site.siteMetadata.title} - ${title}`} />
       <Title>{title}</Title>
       <DateTime>{get(['frontmatter', 'date'])(post)}</DateTime>
-      <ContentWrapper
-        // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: post.html }}
-      />
+      <Paper>
+        <ContentWrapper
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
       category: <Link to={`/${category}`}>{category}</Link>
+      </Paper>
     </div>
   );
 };

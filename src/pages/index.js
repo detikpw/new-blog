@@ -6,27 +6,30 @@ import Post from '../reusables/posts/item';
 import Title from '../reusables/posts/title';
 import DateTime from '../reusables/date-time';
 import { BodyText } from '../reusables/typography';
+import { Paper } from '../reusables/segment';
 
 export default ({ data }) => {
   const markdownRemarks = get('allMarkdownRemark')(data);
   return (
     <PostsWrapper>
-      {markdownRemarks.edges.map(({ node }) => {
-        const frontmatter = get('frontmatter')(node);
-        return (
-          <Post key={get('id')(node)}>
-            <Title>
-              <Link
-                to={get(['fields', 'slug'])(node)}
-              >
-                {frontmatter.title}
-              </Link>
-            </Title>
-            <DateTime>{frontmatter.date}</DateTime>
-            {<BodyText>{node.excerpt}</BodyText>}
-          </Post>
-        );
-      })}
+      <Paper>
+        {markdownRemarks.edges.map(({ node }) => {
+          const frontmatter = get('frontmatter')(node);
+          return (
+              <Post key={get('id')(node)}>
+                <Title>
+                  <Link
+                    to={get(['fields', 'slug'])(node)}
+                  >
+                    {frontmatter.title}
+                  </Link>
+                </Title>
+                <DateTime>{frontmatter.date}</DateTime>
+                {<BodyText>{node.excerpt}</BodyText>}
+              </Post>
+          );
+        })}
+      </Paper>
     </PostsWrapper>
   );
 };
