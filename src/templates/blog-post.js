@@ -34,13 +34,11 @@ export default ({ data }) => {
       <Helmet title={`${data.site.siteMetadata.title} - ${title}`} />
       <Title>{title}</Title>
       <DateTime>{get(['frontmatter', 'date'])(post)}</DateTime>
-      <Paper>
-        <ContentWrapper
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+      <ContentWrapper
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
       category: <Link to={`/${category}`}>{category}</Link>
-      </Paper>
     </div>
   );
 };
