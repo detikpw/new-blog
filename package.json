@@ -6,7 +6,8 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "fix": "node_modules/eslint/bin/eslint.js --fix src"
+    "fix": "node_modules/eslint/bin/eslint.js --fix src",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "gatsby": "^1.9.178",
@@ -31,6 +32,7 @@
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.6.1"
+    "eslint-plugin-react": "^7.6.1",
+    "gh-pages": "^1.1.0"
   }
 }
