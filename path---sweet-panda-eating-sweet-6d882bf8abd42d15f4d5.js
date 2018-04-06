@@ -1,0 +1,2 @@
+webpackJsonp([0x84f0e627203f],{406:function(e,t){e.exports={data:{markdownRemark:{html:'<p>Pandas are really sweet.</p>\n<p>Here\'s a video of a panda eating sweets.</p>\n<iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>',frontmatter:{title:"Sweet Pandas Eating Sweets",category:null,date:"10 August, 2017"}},site:{siteMetadata:{title:"Catatan Detik"}}},pathContext:{slug:"/sweet-panda-eating-sweet/"}}}});
+//# sourceMappingURL=path---sweet-panda-eating-sweet-6d882bf8abd42d15f4d5.js.map

@@ -1,0 +1,110 @@
+{
+  "assetsByChunkName": {
+    "path---linux": [
+      "path---linux-35fcdc503c472c46599a.js",
+      "path---linux-35fcdc503c472c46599a.js.map"
+    ],
+    "path---categories": [
+      "path---categories-bae32f116df0438c02e4.js",
+      "path---categories-bae32f116df0438c02e4.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-366987950968f05c05c2.js",
+      "component---src-pages-index-js-366987950968f05c05c2.js.map"
+    ],
+    "path---": [
+      "path----56e0aafc0c621fbf036d.js",
+      "path----56e0aafc0c621fbf036d.js.map"
+    ],
+    "path---counter": [
+      "path---counter-a0e39f21c11f6a62c5ab.js",
+      "path---counter-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-contact-js": [
+      "component---src-pages-contact-js-0be4c8e68d2827cad8ee.js",
+      "component---src-pages-contact-js-0be4c8e68d2827cad8ee.js.map"
+    ],
+    "path---anime-sora-yori-mo-tooi-basho": [
+      "path---anime-sora-yori-mo-tooi-basho-51f2a2f238660e377ab4.js",
+      "path---anime-sora-yori-mo-tooi-basho-51f2a2f238660e377ab4.js.map"
+    ],
+    "path---anime": [
+      "path---anime-51122b166115a1850ded.js",
+      "path---anime-51122b166115a1850ded.js.map"
+    ],
+    "component---src-pages-counter-js": [
+      "component---src-pages-counter-js-fee76f204b63db4c37c2.js",
+      "component---src-pages-counter-js-fee76f204b63db4c37c2.js.map"
+    ],
+    "component---src-templates-blog-post-js": [
+      "component---src-templates-blog-post-js-fcfd416293808e5af69f.js",
+      "component---src-templates-blog-post-js-fcfd416293808e5af69f.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-a45dd84ea48e3eefb5ca.js",
+      "component---src-layouts-index-js-a45dd84ea48e3eefb5ca.js.map"
+    ],
+    "path---linux-memindahkan-penyimpanan-database-postgre-ke-direktori-lain": [
+      "path---linux-memindahkan-penyimpanan-database-postgre-ke-direktori-lain-34928a0b16e952b98ab1.js",
+      "path---linux-memindahkan-penyimpanan-database-postgre-ke-direktori-lain-34928a0b16e952b98ab1.js.map"
+    ],
+    "path---page-2": [
+      "path---page-2-a0e39f21c11f6a62c5ab.js",
+      "path---page-2-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---index": [
+      "path---index-d19949a7f9ca12f9f751.js",
+      "path---index-d19949a7f9ca12f9f751.js.map"
+    ],
+    "path---sweet-panda-eating-sweet": [
+      "path---sweet-panda-eating-sweet-6d882bf8abd42d15f4d5.js",
+      "path---sweet-panda-eating-sweet-6d882bf8abd42d15f4d5.js.map"
+    ],
+    "component---src-pages-my-files-js": [
+      "component---src-pages-my-files-js-644387d55bab09176411.js",
+      "component---src-pages-my-files-js-644387d55bab09176411.js.map"
+    ],
+    "component---src-templates-category-js": [
+      "component---src-templates-category-js-f07a357bdcca733a30c4.js",
+      "component---src-templates-category-js-f07a357bdcca733a30c4.js.map"
+    ],
+    "path---my-files": [
+      "path---my-files-a28b3ca7a2a28404a18e.js",
+      "path---my-files-a28b3ca7a2a28404a18e.js.map"
+    ],
+    "commons": [
+      "commons-eeb19c0128b19766e52b.js",
+      "commons-eeb19c0128b19766e52b.js.map"
+    ],
+    "path---contact": [
+      "path---contact-a0e39f21c11f6a62c5ab.js",
+      "path---contact-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---pandas-and-bananas": [
+      "path---pandas-and-bananas-66cb141d79bcf1c890dc.js",
+      "path---pandas-and-bananas-66cb141d79bcf1c890dc.js.map"
+    ],
+    "component---src-pages-page-2-js": [
+      "component---src-pages-page-2-js-979b62ab17b844421111.js",
+      "component---src-pages-page-2-js-979b62ab17b844421111.js.map"
+    ],
+    "app": [
+      "app-d1bfe3e6ece6f6b93803.js",
+      "build-js-styles.css",
+      "app-d1bfe3e6ece6f6b93803.js.map",
+      "build-js-styles.css.map"
+    ],
+    "component---src-pages-categories-js": [
+      "component---src-pages-categories-js-a2a32aa64cb405557ea4.js",
+      "component---src-pages-categories-js-a2a32aa64cb405557ea4.js.map"
+    ],
+    "component---src-pages-about-js": [
+      "component---src-pages-about-js-541f9b814cec5caefeb6.js",
+      "component---src-pages-about-js-541f9b814cec5caefeb6.js.map"
+    ],
+    "path---about": [
+      "path---about-7fb7d18dfd231bcb07ce.js",
+      "path---about-7fb7d18dfd231bcb07ce.js.map"
+    ]
+  }
+}

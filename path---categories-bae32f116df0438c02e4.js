@@ -1,0 +1,2 @@
+webpackJsonp([30875753179511],{397:function(t,a){t.exports={data:{site:{siteMetadata:{title:"Catatan Detik"}},allMarkdownRemark:{group:[{fieldValue:"anime",totalCount:1},{fieldValue:"linux",totalCount:1}]}},pathContext:{}}}});
+//# sourceMappingURL=path---categories-bae32f116df0438c02e4.js.map
